@@ -20,8 +20,26 @@ function LoadCountries() {
 
   return (
     <div>
-      <h2>Rest Countries</h2>
-      <h3>Total countries: {countries.length}</h3>
+      {
+        countries.map(country => <Country country={country}></Country>)
+      }
+    </div>
+  )
+}
+
+function Country(props) {
+  const { flags, name, area, population, region, borders, capital } = props.country;
+  console.log(props.country);
+  return (
+    <div>
+      <img src={flags.png} alt="" />
+      <p>Name: <b>{name.common}</b></p>
+      <p>Capital: <b>{capital}</b></p>
+      <p>Population: <b>{population}</b></p>
+      <p>Continets: <b>{region}</b></p>
+      <p>Border: <b>{borders}</b></p>
+      <p>Area: <b>{area}</b></p>
+
     </div>
   )
 }
