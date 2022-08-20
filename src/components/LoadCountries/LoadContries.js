@@ -14,7 +14,9 @@ const LoadContries = () => {
             <h2>All Countries Details</h2>
             <div className='country-item'>
                 {
-                    countries.map(country => <Country country={country}></Country>)
+                    countries.map(country => <Country
+                        country={country}
+                    ></Country>)
                 }
             </div>
         </div>
